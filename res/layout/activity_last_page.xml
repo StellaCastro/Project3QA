@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LastPage"
+    android:background="@drawable/blue_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            style="@style/last_page_views"
+            android:text="@string/thank_you" />
+        <TextView
+            style="@style/last_page_views"
+            android:id="@+id/name_view" />
+
+        <ImageView
+            android:layout_width="@dimen/pupsw"
+            android:layout_height="@dimen/puph"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/puppies_pic" />
+        <Button
+            style="@style/last_page_views"
+            android:text="@string/view_score"
+            android:onClick="checkScore"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="@dimen/margin16"
+            android:gravity="center"
+            >
+            <LinearLayout
+                style="@style/last_page_score_lineal">
+                <TextView
+                    style="@style/score_views"
+                    android:text="@string/correct" />
+                <TextView
+                    style="@style/score_views"
+                    android:layout_margin="@dimen/margin10"
+                    android:id="@+id/correct_score"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/last_page_score_lineal">
+                <TextView
+                    style="@style/score_views"
+                    android:text="@string/incorrect"/>
+                <TextView
+                    style="@style/score_views"
+                    android:layout_margin="@dimen/margin10"
+                    android:id="@+id/incorrect_score"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            style="@style/last_page_views"
+            android:text="@string/reset"
+            android:onClick="startOver" />
+
+    </LinearLayout>
+
+</ScrollView>
